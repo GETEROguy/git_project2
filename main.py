@@ -33,7 +33,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "Cлучайный круг"))
+        self.pushButton.setText(_translate("MainWindow", "Желтый круг"))
 
 
 class Example(QMainWindow, Ui_MainWindow):
@@ -48,7 +48,7 @@ class Example(QMainWindow, Ui_MainWindow):
     def draw(self):
         self.figure = 'circle'
         self.size = random.randint(10, 100)
-        self.color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
+        self.color = (255, 255, 0)
         self.flag = True
         self.update()
 
